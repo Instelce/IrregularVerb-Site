@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbe Irrégulier</title>
+
+    <link rel="icon" href="{% static 'verbs/images/logo.png' %}">
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="{% static 'verbs/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'verbs/css/main.css' %}">
+
+    <!-- FONT LINK -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container topbar">
+        <h3 class="topbar__title">Les verbes irréguliers</h3>
+        <a download="{% static 'verbs/files/Fiche_Verbe_Irréguliers.pdf' %}" href="/" class="btn">Télécharger la fiche</a>
+    </div>
+
+    {% if letters %}
+        <div class="sidebar">
+            {% for letter in letters %}
+                <a href="#{{ letter }}">{{ letter }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <header class="container header">
+        <h1>Bienvenue sur le petit dico des <br>verbes irréguliers Anglais</h1>
+    </header>
+
+    <main class="container main__container">
+        {% block content %}{% endblock content %}
+    </main>
+
+    <section class="container bottom__section">
+        <h2>Envie d'avoir une fiche avec tous les verbes irréguliers ?</h2>
+        <a download="{% static 'verbs/files/Fiche_Verbe_Irreguliers.pdf' %}" href="/" class="btn">Télécharger la fiche</a>
+    </section>
+
+    <footer class="container footer">
+        <div>
+            <p>&copy; Instelce</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'verbs/js/main.js' %}"></script>
+</body>
+</html>

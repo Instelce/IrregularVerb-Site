@@ -1,0 +1,57 @@
+{% extends 'verbs/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!--{% for letter in letters %}
+        <div class="accordion__content">
+            <table class="content__top">
+                <tr>
+                    <td>Infinitif</td>
+                    <td>Preterit</td>
+                    <td>Participe passe</td>
+                    <td>Traduction</td>
+                </tr>
+            </table>
+
+            <table class="verb__container">
+                {% for verb in verbs %}
+                    <tr class="verb__item">
+                        <td>{{ verb.infinitive }}</td>
+                        <td>{{ verb.preterit }}</td>
+                        <td>{{ verb.past_participle }}</td>
+                        <td>{{ verb.translation }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endfor %} -->
+
+    {% for letter in letters %}
+        <section id="{{ letter }}" class="accordion">
+            <button class="accordion__top">
+                <div><h3 class="lettre__title">{{ letter }}</h3><p></p></div>
+                <img class="top__arrow" src="{% static 'verbs/images/down-arrow.svg' %}">
+            </button>
+            <div class="accordion__content">
+                <table class="content__top">
+                    <tr>
+                        <td>Infinitif</td>
+                        <td>Preterit</td>
+                        <td>Participe passe</td>
+                        <td>Traduction</td>
+                    </tr>
+                </table>
+                <table class="verb__container">
+                    {% for verb in letter.irregularverbs_set.all %}
+                        <tr class="verb__item">
+                            <td>{{ verb.infinitive }}</td>
+                            <td>{{ verb.preterit }}</td>
+                            <td>{{ verb.past_participle }}</td>
+                            <td>{{ verb.translation }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    {% endfor %}
+{% endblock content %}
