@@ -21,7 +21,9 @@
 
     <div class="container topbar">
         <h3 class="topbar__title">Les verbes irréguliers</h3>
-        <a download="{% static 'verbs/files/Fiche_Verbe_Irréguliers.pdf' %}" href="/" class="btn">Télécharger la fiche</a>
+        {% if fiches %}
+            <a download="{{ fiches.fiche.url }}" href="" class="btn">Télécharger la fiche</a>
+        {% endif %}
     </div>
 
     {% if letters %}
@@ -42,7 +44,9 @@
 
     <section class="container bottom__section">
         <h2>Envie d'avoir une fiche avec tous les verbes irréguliers ?</h2>
-        <a download="{% static 'verbs/files/Fiche_Verbe_Irreguliers.pdf' %}" href="/" class="btn">Télécharger la fiche</a>
+        {% if fiches %}
+            <a download="{{ fiches.fiche.url }}" href="" class="btn">Télécharger la fiche</a>
+        {% endif %}
     </section>
 
     <footer class="container footer">

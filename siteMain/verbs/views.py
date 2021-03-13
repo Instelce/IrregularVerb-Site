@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import IrregularVerbs, Letter
+from .models import IrregularVerbs, Letter, Fiche
 
 
 def verb_list(request):
-    # letter = Letter.objects.filter()
-
     context = {
-        'letters': Letter.objects.all()
+        'letters': Letter.objects.all(),
+        'fiches': Fiche.objects.get()
     }
 
     return render(request, 'verbs/home.html', context)    

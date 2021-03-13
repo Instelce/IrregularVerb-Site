@@ -95,11 +95,11 @@ a {
 .sidebar {
     width: 40px;
     height: auto;
-    left: 40px; top: 80px;
+    left: 20px; top: 20px;
     padding: 5px 0px;
 
     position: fixed;
-    z-index: 9;
+    z-index: 12;
 
     border-radius: 10px;
     background: #ffffff;
@@ -185,9 +185,14 @@ a {
     border-top: none;
     border-left: none;
     border-right: none;
+
+    opacity: 0.8;
     
-    transition: border 0.4s;
+    transition: border 0.3s, opacity 0.3s;
     cursor: pointer;
+}
+.accordion__top:hover {
+    opacity: 1;
 }
 
 .accordion__top.active {

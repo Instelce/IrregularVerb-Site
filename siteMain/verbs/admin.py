@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import IrregularVerbs, Letter
+from .models import IrregularVerbs, Letter, Fiche
 
 
 class IrregularVerbsInline(admin.TabularInline):
@@ -19,3 +19,4 @@ class LetterAdmin(admin.ModelAdmin):
 
 admin.site.register(Letter, LetterAdmin)
 admin.site.register(IrregularVerbs)
+admin.site.register(Fiche)

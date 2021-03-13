@@ -17,3 +17,10 @@ class IrregularVerbs(models.Model):
 
     def __str__(self):
         return f'Verbe {self.infinitive}'
+
+
+class Fiche(models.Model):
+    fiche = models.FileField(upload_to="fiche/")
+
+    def __str__(self):
+        return 'Pdf File'
