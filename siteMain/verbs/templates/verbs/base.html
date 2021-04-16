@@ -45,7 +45,7 @@
     <section class="container bottom__section">
         <h2>Envie d'avoir une fiche avec tous les verbes irréguliers ?</h2>
         {% if fiches %}
-            <a download="{{ fiches.fiche.url }}" href="" class="btn">Télécharger la fiche</a>
+            <a download="{{ fiches.fiche.url }}" type="file/{{ fiches.fiche.type }}" href="" class="btn">Télécharger la fiche</a>
         {% endif %}
     </section>
 

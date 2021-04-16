@@ -1,0 +1,4 @@
+env/
+siteMain/__pycache__
+verbs/__pycache__/
+verbs/migrations/__pycache__/

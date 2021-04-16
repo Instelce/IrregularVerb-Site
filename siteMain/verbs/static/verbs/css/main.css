@@ -251,6 +251,8 @@ a {
 .content__top tr td {
     width: 25%;
 
+    cursor: default;
+
     text-align: center;
     padding: 14px 10px;
     border: 1px solid var(--color-secondary-blue);
@@ -259,6 +261,14 @@ a {
     font-weight: 600;
     color: var(--color-primary-dark-blue);
     text-transform: uppercase;
+}
+.verb__container tr {
+    cursor: default;
+    transition: background 0.1s;
+}
+
+.verb__container tr:hover {
+    background: rgba(154, 209, 212, 0.3);
 }
 
 .verb__container { width: 100%; }
