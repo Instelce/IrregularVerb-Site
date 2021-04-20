@@ -9,7 +9,3 @@ routers:
   - application_name: "irregular-verb-site"
     paths:
     - "/*"
-databases:
-- type: postgresql # database type
-  version: "11.5" # database version
-  name: verbs # database name (must be unique)
