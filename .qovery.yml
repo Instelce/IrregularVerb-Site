@@ -1,0 +1,11 @@
+---
+application:
+  name: "irregular-verb-site"
+  project: "irregular-verbs"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-irregular-verb-site"
+  routes:
+  - application_name: "irregular-verb-site"
+    paths:
+    - "/*"
