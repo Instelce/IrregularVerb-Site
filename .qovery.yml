@@ -3,6 +3,10 @@ application:
   name: "irregular-verb-site"
   project: "irregular-verbs"
   organization: "QoveryCommunity"
+databases:
+- type: "POSTGRESQL"
+  name: "verbs"
+  version: "11"
 routers:
 - name: "main-irregular-verb-site"
   routes:
